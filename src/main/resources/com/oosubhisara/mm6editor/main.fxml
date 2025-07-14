@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oosubhisara.mm6editor.Controller">
+    <top>
+        <MenuBar>
+            <menus>
+                <Menu text="File">
+                    <items>
+                        <MenuItem text="Select Save Directory" 
+                            onAction="#onSelectSaveDirectory" />
+                        <MenuItem text="Refresh" onAction="#onRefresh" />
+                        <SeparatorMenuItem />
+                        <MenuItem text="Quit" onAction="#onQuit" />
+                    </items>
+                </Menu>  
+                <Menu text="Edit">
+                    <items>
+                        <MenuItem text="Edit Title" 
+                            onAction="#onEditTitle" />
+                        <MenuItem text="Edit Gold" 
+                            onAction="#onEditGold" />
+                        <MenuItem text="Edit Deposited Gold" 
+                            onAction="#onEditDepositedGold" />
+                        <MenuItem text="Edit Food" 
+                            onAction="#onEditFood" />
+                    </items>
+                </Menu>  
+                <Menu text="Debug">
+                    <items>
+                        <MenuItem text="Extract Data Files" 
+                            onAction="#onExtractDataFiles" />
+                        <MenuItem text="Show Data Headers" 
+                            onAction="#onShowFileOffsets" />
+                    </items>
+                </Menu>  
+                <Menu text="Help">
+                    <items>
+                        <MenuItem text="About MM6SaveEditor" />
+                        <MenuItem text="Website" />
+                    </items>
+                </Menu>  
+            </menus>
+        </MenuBar>
+    </top>
+    
+    <center>
+        <TableView fx:id="tvSaveFiles">
+            <contextMenu>
+                <ContextMenu>
+                    <items>
+                        <MenuItem text="* DEBUG : Extract data files" 
+                            onAction="#onExtractDataFiles" />
+                        <MenuItem text="* DEBUG : Show data headers" 
+                            onAction="#onShowFileOffsets" />
+                        <SeparatorMenuItem />
+                        <MenuItem text="Edit Title" onAction="#onEditTitle" />
+                        <MenuItem text="Edit Gold" onAction="#onEditGold" />
+                        <MenuItem text="Edit Deposited Gold" 
+                            onAction="#onEditDepositedGold" />
+                        <MenuItem text="Edit Food" onAction="#onEditFood" />
+                        <SeparatorMenuItem />
+                        <MenuItem text="Copy"/>
+                        <MenuItem text="Delete"/>
+                    </items>
+                </ContextMenu>
+            </contextMenu>
+        </TableView>
+    </center>
+    
+    <bottom>
+        <VBox prefHeight="230">
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="15.0" />
+            </padding>
+            <TableView fx:id="tvDetails" />
+        </VBox>
+    </bottom>
+</BorderPane>

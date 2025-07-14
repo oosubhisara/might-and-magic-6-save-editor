@@ -1,0 +1,14 @@
+outb1.odm=Kriegspire
+outb2.odm=Blackshire
+outc2.odm=Free Haven
+outc3.odm=Mire of the Damned
+outd1.odm=Silver Cove
+outd2.odm=Bootleg Bay
+outd3.odm=Castle Ironfist
+oute2.odm=Misty Island
+oute3.odm=New Sorpigal
+d01.blv=Goblinwatch
+d02.blv=Abandoned Temple
+d07.blv=Silver Helm Outpost
+sewer.blv=Free Haven Sewer
+znwc.blv=New World Computing
